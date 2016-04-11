@@ -1,0 +1,34 @@
+h1 {
+	color: white;
+	background-color: red;
+	border-top: black 5px solid;
+	border-bottom: black 5px solid;
+	text-align: center;
+	font-family: sans-serif;
+	padding: 5px;
+}
+
+body{
+	background-color: cornsilk;
+}
+
+nav ul, nav li{
+	list-style-type: none;
+	display: inline;
+	background-color: lightgrey;
+	padding:5px;
+	
+}
+
+nav{
+	text-align:center;
+	border-bottom:black 5px solid;
+	padding-bottom:5px;
+}
+
+#navlinks{
+	border-right: black 5px solid;
+	font-size:1.5em;
+	width:10%;
+
+}
