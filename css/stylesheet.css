@@ -26,15 +26,49 @@ nav{
 	padding-bottom:5px;
 }
 
+section {
+	width:100%;
+	overflow:hidden;
+	display:block;
+}
+
 #navlinks{
 	border-right: black 5px solid;
 	font-size:1.5em;
-	width:10%;
 	float:left;
-	width:200px;
+	width:20%;
 }
 #main-container {
-	float:left;
+	float: left;
 	padding: 5px 15px;
 	overflow: hidden;
+	display: block;
+	width: 75%;
+}
+#produktbilder {
+	width:50%;
+}
+#produktbilder img {
+	width:40px;
+	float:left;
+	margin:5px;
+}
+#produktbilder img:first-child {
+	width:100%;
+}
+#preise {
+	
+}
+#preise p {
+	overflow:hidden;
+}
+#preise p span {
+	float:right;
+}
+#preise div {
+	float:right;
+}
+#produktbeschreibung {
+	width:75%;
+	float:left;
 }
