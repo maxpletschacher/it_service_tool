@@ -72,3 +72,29 @@ section {
 	width:75%;
 	float:left;
 }
+
+.produktbox {
+	position: relative;
+	float: left;
+    width: 200px;
+	height: 200px;
+    padding: 10px;
+	margin: 20px;
+    border: 1px solid black;
+    background-color: lightblue;
+	
+}
+
+.preis{
+	position: absolute;
+	right: 0px;
+	bottom: 10px;
+	padding: 5px;
+}
+
+.bestellnummer{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	padding: 5px;
+}
