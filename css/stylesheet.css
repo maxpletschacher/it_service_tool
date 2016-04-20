@@ -74,11 +74,12 @@ section {
 }
 
 .produktbox {
+	overflow:hidden;
 	position: relative;
 	float: left;
+	padding: 5px;
     width: 200px;
 	height: 200px;
-    padding: 10px;
 	margin: 20px;
     border: 1px solid black;
     background-color: lightblue;
@@ -97,4 +98,9 @@ section {
 	left: 0px;
 	bottom: 0px;
 	padding: 5px;
+}
+.produktbox img{
+	width:90%;
+	float:left;
+	margin:10px;
 }
