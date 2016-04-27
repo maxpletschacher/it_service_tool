@@ -51,7 +51,7 @@ header p a {
 #subnav h4 {
 	background-color:#3D99FF;
 	color:#ffffff;
-	padding:5px 2px;
+	margin:0px;
 }
 #subnav ul li {
 	float: none;
@@ -67,7 +67,7 @@ main {
 	padding:15px;
 	min-height:300px;
 }
-main h2, h3 {
+main h2, h3, h4 {
 	background-color:#3D99FF;
 	color: #ffffff;
 	padding: 5px 10px;
@@ -96,11 +96,61 @@ main h2 {
 	color:#3D99FF !important;
 }
 .product-group .product p {
-	color:#007708;
 	font-size:10pt;
 	overflow:hidden;
 }
 .product-group .product p span {
 	float:right;
 	color:#000000;
+}
+#product-view {
+	overflow:hidden;
+	margin-bottom: 10px;
+}
+#product-image {
+	width: 300px;
+	overflow: hidden;
+	border:solid black 1px;
+	float: left;
+	margin-right: 10px;
+}
+#product-image img {
+	width:100%;
+}
+#details p {
+	overflow:hidden;
+}
+#details p span {
+	float:right;
+}
+#details div {
+	float: right;
+	width: auto;
+	margin:10px 0;
+	overflow:hidden;
+}
+#product-description {
+	overflow: hidden; 
+	float: left;
+	margin-top: 10px;
+	margin-bottom:20px;
+}
+#product-description h5 {
+	background-color:#3D99FF;
+	color: #ffffff;
+	padding: 5px 10px;
+	margin: 10px 0px;	
+}
+#product-description ul.features li {
+	margin-left: 20px;
+	list-style-type: disc;
+}
+#details span a {
+	text-decoration:none;
+	color:#3D99FF;
+}
+
+
+.green {
+	color:#007708;
 }
