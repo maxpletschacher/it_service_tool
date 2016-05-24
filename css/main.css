@@ -189,21 +189,14 @@ p.pay span, p.pay button {
 	float:right;
 }
 p.pay button {
-	background-color: #3d99ff;
-	color: #ffffff;
-	border-radius: 8px;
-	border-style: none;
-	font-size: 18pt;
 	width: 30%;
-	padding: 10px;
-	margin: 10px 0px;
 }
 button {
 	background-color: #3d99ff;
 	color: #ffffff;
 	border-radius: 8px;
 	border-style: none;
-	font-size: 18pt;
+	font-size: 12pt;
 	padding: 10px;
 	margin: 10px 0px;
 }
@@ -265,6 +258,7 @@ button {
 }
 p.bewerter {
 	font-weight: bold;
+	margin-top:10px;
 }
 p.bewerter span {
 	font-weight: normal;
