@@ -58,7 +58,9 @@ header p a {
 	max-width: 200px;
 	float: left;
 	padding:5px;
-	background-color:#ffffff !important;
+	background-color: #eeeeee !important;
+	border:solid #3d99ff 1px;
+	margin-left: 15px;
 }
 #subnav h4 {
 	background-color:#3D99FF;
@@ -73,6 +75,9 @@ header p a {
 }
 #subnav ul li ul li {
 	margin-left:10px;
+}
+#content {
+	background-color:#eeeeee;
 }
 main {
 	overflow:hidden;
@@ -95,11 +100,11 @@ main h2 {
 }
 .product-group .product {
 	margin-left: 20px;
-	padding:5px;
+	padding:15px;
 	width:150px;
 	overflow:hidden;
 	float:left;
-	background-color: #eeeeee;
+	background-color: #ffffff;
 }
 .product-group .product img {
 	width:100%;
@@ -193,6 +198,15 @@ p.pay button {
 	padding: 10px;
 	margin: 10px 0px;
 }
+button {
+	background-color: #3d99ff;
+	color: #ffffff;
+	border-radius: 8px;
+	border-style: none;
+	font-size: 18pt;
+	padding: 10px;
+	margin: 10px 0px;
+}
 
 .green {
 	color:#007708;
@@ -232,5 +246,30 @@ p.pay button {
 	font-size: 18pt;
 	width: 100%;
 	padding: 10px;
+	margin: 10px 0px;
+}
+#bewertung {
+	background-color: #ffffff;
+	padding: 5px 15px;
+	margin: 10px 0px;
+}
+#bewertung p {
+	margin: 5px 0px;
+}
+#bewertung p input {
+	margin-right: 5px;
+}
+#bewertung textarea {
+	width: 100%;
+	height: 50px;
+}
+p.bewerter {
+	font-weight: bold;
+}
+p.bewerter span {
+	font-weight: normal;
+}
+.kundenbewertung {
+	font-size: 11pt;
 	margin: 10px 0px;
 }
