@@ -15,7 +15,6 @@ function init() {
 		document.getElementById("regOpen2").addEventListener("click", function(){
 			popup("registrieren");
 		});
-		document.getElementById("cartadd").addEventListener("click",warenkorb_add);
 }
 function popup(id){
 	if(document.getElementById(id).className == "popclose"){ //falls die Klasse popclose ist
@@ -24,8 +23,4 @@ function popup(id){
 	else{
 		document.getElementById(id).className = "popclose"
 	}
-}
-function warenkorb_add(){
-	var element = document.getElementById("warenkorb");
-	element.innerHTML = "Warenkorb (1)";
 }

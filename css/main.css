@@ -270,29 +270,3 @@ button {
 .popopen {
 	display:block;
 }
-#bewertung {
-	background-color: #ffffff;
-	padding: 5px 15px;
-	margin: 10px 0px;
-}
-#bewertung p {
-	margin: 5px 0px;
-}
-#bewertung p input {
-	margin-right: 5px;
-}
-#bewertung textarea {
-	width: 100%;
-	height: 50px;
-}
-p.bewerter {
-	font-weight: bold;
-	margin-top:10px;
-}
-p.bewerter span {
-	font-weight: normal;
-}
-.kundenbewertung {
-	font-size: 11pt;
-	margin: 10px 0px;
-}
