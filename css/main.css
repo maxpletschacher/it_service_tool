@@ -33,6 +33,7 @@
 	padding:5px;
 	font-size:12px;
 	color:black;
+	margin-right:10px;
 }
 
 header {
@@ -44,7 +45,6 @@ header h1 {
 	float:left;
 }
 header p {
-	float:right;
 	overflow:hidden;
 	display:block;
 	color:#3D99FF;
@@ -52,6 +52,15 @@ header p {
 header p a {
 	text-decoration:none;
 	color:#3D99FF;
+}
+header .options {
+	display: block; 
+	overflow: hidden; 
+	width: 33%; 
+	float: right;
+}
+header .options form {
+	float:left;
 }
 #subnav {
 	margin-top:15px;
@@ -89,6 +98,13 @@ main h2, h3, h4 {
 	color: #ffffff;
 	padding: 5px 10px;
 	margin: 10px 0px;	
+}
+noscript {
+	background-color:#3D99FF;
+	color: #ffffff;
+	padding: 5px 10px;
+	width: 100%;
+	display: block;
 }
 main h2 {
 	margin-top:5px;
@@ -205,7 +221,7 @@ button {
 	color:#007708;
 }
 
-#popup {
+#popup, #login, #registrieren {
 	position: absolute;
 	background-color: #ffffff;
 	border: solid #3d99ff 3px;
@@ -219,19 +235,19 @@ button {
 	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
-#popup form {
+#popup form, #login form, #registrieren form {
 	margin:5px 0px;
 }
-#popup form label {
+#popup form label, #login form label, #registrieren form label {
 	font-weight:bold;
 }
-#popup form input[type="text"], #popup form input[type="password"] {
+#popup form input[type="text"], #popup form input[type="password"], #login form input[type="text"], #registrieren form input[type="text"], #login form input[type="password"], #registrieren form input[type="password"] {
 	width: 100%;
 	height: 35px;
 	font-size: 16pt;
 	margin: 5px 0px;
 }
-#popup form button {
+#popup form button, #login form button, #registrieren form button {
 	background-color: #3d99ff;
 	color: #ffffff;
 	border-radius: 8px;
@@ -240,6 +256,19 @@ button {
 	width: 100%;
 	padding: 10px;
 	margin: 10px 0px;
+}
+#popup a, #login a, #registrieren a {
+	position: absolute;top:15px;
+	text-decoration: none;
+	color: darkred;
+	right:20px;
+	font-weight: bold;
+}
+.popclose {
+	display:none;
+}
+.popopen {
+	display:block;
 }
 #bewertung {
 	background-color: #ffffff;

@@ -4,19 +4,24 @@ document.addEventListener("DOMContentLoaded",init);
 // Loginpopup öffnen und wieder schließen mithilfe von flexibler Klasse zur ID
 // TODO: Passende CSS müssen erstellt werden.
 function init() {
-	if(document.getElementByID("popup").classname = popclose){ //falls die Klasse popclose ist
-		document.getElementByID("popup").addEventListener("click",openpop); //öffne openpop beim drücken auf link
+		document.getElementById("loginOpen").addEventListener("click", function(){
+			popup("login");
+		});
+		document.getElementById("regOpen").addEventListener("click", function(){
+			popup("registrieren");
+		});
+		document.getElementById("loginOpen2").addEventListener("click", function(){
+			popup("login");
+		});
+		document.getElementById("regOpen2").addEventListener("click", function(){
+			popup("registrieren");
+		});
+}
+function popup(id){
+	if(document.getElementById(id).className == "popclose"){ //falls die Klasse popclose ist
+		document.getElementById(id).className = "popopen"
 	}
 	else{
-		document.getElementByID("popup").addEventListener("click",closeform); //schließe openpop beim drücken auf link
+		document.getElementById(id).className = "popclose"
 	}
-	}
-
-function openpop(){
-	document.getElementById("popup").className = "popopen"
 }
-
-function closeform(){
-	document.getElementById("popup").className = "popclose"
-}
-

@@ -4,12 +4,21 @@
 <meta charset="UTF-8">
 <title>IT.Software.Hardware</title>
 <link rel="stylesheet" href="../css/main.css" />
-<noscript>Javascript ist deaktiviert. Um die Seite voll nutzen zu können aktivieren Sie bitte Javascript.</noscript>
+<script type="text/javascript" src="../js/main.js"></script>
 </head>
 
 <body>
-	<div id="popup">
-    	<h3>Registrierung</h3>
+	<div id="login" class="popclose">
+    	<h3>Login</h3><a href="#" id="loginOpen2">X</a>
+        <p>Test Text im "p"-Element.</p>
+        <form action="#" method="post">
+			<label for="email">E-Mail</label><input type="text" name="email" id="email" placeholder="E-Mail">
+			<label for="password">Passwort</label><input type="password" name="password" id="password" placeholder="********">
+            <button>Login</button>
+        </form>
+    </div>
+    <div id="registrieren" class="popclose">
+    	<h3>Registrierung</h3><a href="#" id="regOpen2">X</a>
         <p>Registrierung Beispiel:</p>
         <form action="#" method="post">
         	<label for="vorname">Vorname</label><input type="text" name="vorname" id="vorname" placeholder="Vorname">
@@ -18,27 +27,21 @@
 			<label for="password">Passwort</label><input type="password" name="password" id="password" placeholder="********">
             <button>Registrieren</button>
         </form>
-    	<h3>Login</h3>
-        <p>Test Text im "p"-Element.</p>
-        <form action="#" method="post">
-			<label for="email">E-Mail</label><input type="text" name="email" id="email" placeholder="E-Mail">
-			<label for="password">Passwort</label><input type="password" name="password" id="password" placeholder="********">
-            <button>Login</button>
-        </form>
     </div>
 	<div id="wrap">
+		<noscript>Javascript ist deaktiviert. Um die Seite voll nutzen zu können aktivieren Sie bitte Javascript.</noscript>
         <header>
         	<h1>IT.Software.Hardware</h1>
-            <p>
-			<a href="#">
+        	<div class="options">
 				<form action="#">
 					<div id="search-box">
 						<input placeholder="Produkt suchen" id="search-text" type="text" name="search" autocomplete="off">
 					</div>
 				</form>
-			</a>
-			| <a href="#">Login</a> | <a href="#">Registrieren</a>
-			</p>
+	            <p>
+				| <a href="#" id="loginOpen">Login</a> | <a href="#" id="regOpen">Registrieren</a>
+				</p>
+			</div>
         </header>
         <nav>
             <ul>
