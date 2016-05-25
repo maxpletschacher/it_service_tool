@@ -10,7 +10,6 @@
 <body>
 	<div id="login" class="popclose">
     	<h3>Login</h3><a href="#" id="loginOpen2">X</a>
-        <p>Test Text im "p"-Element.</p>
         <form action="#" method="post">
 			<label for="email">E-Mail</label><input type="text" name="email" id="email" placeholder="E-Mail">
 			<label for="password">Passwort</label><input type="password" name="password" id="password" placeholder="********">
@@ -19,7 +18,6 @@
     </div>
     <div id="registrieren" class="popclose">
     	<h3>Registrierung</h3><a href="#" id="regOpen2">X</a>
-        <p>Registrierung Beispiel:</p>
         <form action="#" method="post">
         	<label for="vorname">Vorname</label><input type="text" name="vorname" id="vorname" placeholder="Vorname">
             <label for="name">Name</label><input type="text" name="name" id="name" placeholder="Name">
@@ -33,10 +31,8 @@
         <header>
         	<h1>IT.Software.Hardware</h1>
         	<div class="options">
-				<form action="#">
-					<div id="search-box">
-						<input placeholder="Produkt suchen" id="search-text" type="text" name="search" autocomplete="off">
-					</div>
+				<form action="#" id="search-box">
+					<input placeholder="Produkt suchen" id="search-text" type="text" name="search" autocomplete="off">
 				</form>
 	            <p>
 				| <a href="#" id="loginOpen">Login</a> | <a href="#" id="regOpen">Registrieren</a>
@@ -70,6 +66,7 @@
             </nav>
             <main>
               <h2>Warenkorb</h2>
+              	<form action="#">
               	<div id="product-list">
                 	<div class="product">
                         <div class="product-image">
@@ -78,7 +75,7 @@
                         <div class="details">
                             <p>Bestellnummer:<span>702 850</span></p>
                             <hr>
-                            <p>Anzahl x Preis:<span><input type="text" size="3" placeholder="1" value="1"> x 5,99 € (5,99 €)</span><br>
+                            <p>Anzahl x Preis:<span><input type="text" size="3" placeholder="1" value="1" name="anz[]"><input type="hidden" value="1" name="prodId"> x 5,99 € (5,99 €)</span><br>
                             <span>Inkl. MwSt., <a href="#">zzgl. Versandkosten</a></span></p>
                             <hr>
                             <p>Verfügbarkeit:<span class="green">Artikel verfügbar.</span></p>
@@ -91,7 +88,7 @@
                         <div class="details">
                             <p>Bestellnummer:<span>702 850</span></p>
                             <hr>
-                            <p>Anzahl x Preis:<span><input type="text" size="3" placeholder="1" value="1"> x 5,99 € (5,99 €)</span><br>
+                            <p>Anzahl x Preis:<span><input type="text" size="3" placeholder="1" value="1" name="anz[]"><input type="hidden" value="1" name="prodId"> x 5,99 € (5,99 €)</span><br>
                             <span>Inkl. MwSt., <a href="#">zzgl. Versandkosten</a></span></p>
                             <hr>
                             <p>Verfügbarkeit:<span class="green">Artikel verfügbar.</span></p>
@@ -104,7 +101,7 @@
                         <div class="details">
                             <p>Bestellnummer:<span>702 850</span></p>
                             <hr>
-                            <p>Anzahl x Preis:<span><input type="text" size="3" placeholder="1" value="1"> x 5,99 € (5,99 €)</span><br>
+                            <p>Anzahl x Preis:<span><input type="text" size="3" placeholder="1" value="1" name="anz[]"><input type="hidden" value="1" name="prodId"> x 5,99 € (5,99 €)</span><br>
                             <span>Inkl. MwSt., <a href="#">zzgl. Versandkosten</a></span></p>
                             <hr>
                             <p>Verfügbarkeit:<span class="green">Artikel verfügbar.</span></p>
@@ -115,12 +112,11 @@
                 <p class="pay"><b>Netto:</b> <span>15,10 €</span></p>
                 <p class="pay">Mehrwertsteuer: <span>2,87 €</span></p>
                 <p class="pay"><b>Summe:</b> <span>17,97 €</span></p>
-                <p class="pay"><button>Kaufen</button></p>
                 <h3>Zahlungsmethoden:</h3>
-                <ul class="features">
-                    <li>Vorkasse</li>
-                    <li>PayPal</li>
-                </ul>
+                	<p><input name="zahlungsart" type="radio"> Vorkasse</p>
+                	<p><input name="zahlungsart" type="radio"> PayPal</p>
+                <p class="pay"><button>Kaufen</button></p>
+                </form>
             </main>
         </div>
         <footer>

@@ -24,11 +24,6 @@
 	text-decoration: none;
 }
 
-#search-box{
-	background:white;
-	float:right;
-}
-
 #search-text {
 	padding:5px;
 	font-size:12px;
@@ -112,10 +107,12 @@ main h2 {
 .product-group {
 	border:solid #3D99FF 1px;
 	padding:10px;
+	padding-top:0px;
 	overflow:hidden;
 }
 .product-group .product {
 	margin-left: 20px;
+	margin-top:20px;
 	padding:15px;
 	width:150px;
 	overflow:hidden;
