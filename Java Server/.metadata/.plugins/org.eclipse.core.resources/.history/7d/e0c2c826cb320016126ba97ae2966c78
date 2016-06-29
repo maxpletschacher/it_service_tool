@@ -1,0 +1,134 @@
+package de.ittool;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
+
+/**
+ * Servlet implementation class Product
+ */
+@WebServlet("/product")
+public class Product extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	@Resource(lookup="jdbc/MyTestSQLPool")
+	private DataSource ds;
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// Servlet zur Entgegennahme von Formularinhalten und Generierung eines Beans zur Weitergabe
+		// der Formulardaten an eine JSP
+		request.setCharacterEncoding("UTF-8");	
+		
+		int id;
+		if (request.getParameter("id") == null) {
+	        id = 1;
+	    } else {
+	    	id = Integer.valueOf(request.getParameter("id"));
+	    }
+
+		// DB-Zugriff
+		//
+		Produkt produkt = getProdukt(id);
+		List<Produkt> bestseller = listBestseller();
+		
+		//definitionen
+		Meta meta = new Meta();
+		meta.setTitle("IT.Software.Hardware | "+produkt.getName()+"");
+		meta.setCss("<link rel='stylesheet' href='css/produktansicht.css' />");
+		meta.setJs("<script type='text/javascript' src='js/produktansicht.js'></script><script type='text/javascript' src='js/waren.js'></script>");
+		
+		// Scope "Request"
+		request.setAttribute("meta", meta);
+		request.setAttribute("produkt", produkt);
+		request.setAttribute("bestseller", bestseller);
+		
+		// Weiterleiten an JSP
+		final RequestDispatcher dispatcher = request.getRequestDispatcher("product.jsp");
+		dispatcher.forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+	private Produkt getProdukt(int id) throws ServletException {
+		Produkt produkt = new Produkt();
+		// DB-Zugriff
+		try (Connection con = ds.getConnection();
+			 PreparedStatement pstmt = 
+					 con.prepareStatement("SELECT produkte.id,produkte.produktname,produkte.produktbeschreibung,produkte.produktfeatures,produkte.bild1,produkte.bild2,produkte.bild3,kategorie.bezeichnung,produkte.lagerbestand,produkte.preis "
+					 		            + "FROM produkte "
+					 		            + "INNER JOIN kategorie ON kategorie.id = produkte.kategorie where produkte.id = ?")) {
+			pstmt.setInt(1, id);
+			try (ResultSet rs = pstmt.executeQuery()) {
+				if(rs.next()){
+					produkt.setId(rs.getInt(1));
+					produkt.setName(rs.getString(2));
+					produkt.setBeschreibung(rs.getString(3));
+					produkt.setFeature(rs.getString(4));
+					produkt.setBild1(rs.getString(5));
+					produkt.setBild2(rs.getString(6));
+					produkt.setBild3(rs.getString(7));
+					produkt.setKategorie(rs.getString(8));
+					produkt.setLagerbestand(rs.getInt(9));
+					produkt.setPreis(rs.getDouble(10));
+				}
+			}
+		} catch (Exception ex) {
+			throw new ServletException(ex.getMessage());
+		}
+		
+		return produkt;
+	}
+	private List<Produkt> listBestseller() throws ServletException {
+		List<Produkt> produkte = new ArrayList<Produkt>();
+
+		// DB-Zugriff
+		try (Connection con = ds.getConnection();
+			 PreparedStatement pstmt = 
+					 con.prepareStatement("SELECT produkte.id,produkte.produktname,produkte.produktbeschreibung,produkte.produktfeatures,produkte.bild1,produkte.bild2,produkte.bild3,kategorie.bezeichnung,produkte.lagerbestand,produkte.preis "
+							 + "FROM (produkte INNER JOIN kategorie ON kategorie.id = produkte.kategorie) "
+							 + "right join `bestellpositionen` on bestellpositionen.`produktid` = produkte.id "
+							 + "group by `produktid` order by sum(anzahl) DESC limit 5;")) {
+			
+			try (ResultSet rs = pstmt.executeQuery()) {
+				while (rs.next()) {
+					Produkt produkt = new Produkt();
+					produkt.setId(rs.getInt(1));
+					produkt.setName(rs.getString(2));
+					produkt.setBeschreibung(rs.getString(3));
+					produkt.setFeature(rs.getString(4));
+					produkt.setBild1(rs.getString(5));
+					produkt.setBild2(rs.getString(6));
+					produkt.setBild3(rs.getString(7));
+					produkt.setKategorie(rs.getString(8));
+					produkt.setLagerbestand(rs.getInt(9));
+					produkt.setPreis(rs.getDouble(10));
+					produkte.add(produkt);
+				}
+			}
+		} catch (Exception ex) {
+			throw new ServletException(ex.getMessage());
+		}
+		
+		return produkte;
+	}
+
+}

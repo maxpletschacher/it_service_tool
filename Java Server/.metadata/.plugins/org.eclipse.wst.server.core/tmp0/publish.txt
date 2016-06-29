@@ -1,3 +1,8 @@
 #GlassFish 3
-#Tue May 24 14:39:50 CEST 2016
-org.eclipse.jst.jee.server\:WebEntwicklung_DWP=C\:\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\WebEntwicklung_DWP
+#Wed Jun 29 10:22:45 CEST 2016
+org.eclipse.jst.jee.server\:WebEntwicklung_DWP=C\:\\Users\\deniz\\Desktop\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\WebEntwicklung_DWP
+org.eclipse.jst.jee.server\:abc=C\:\\Users\\deniz\\Desktop\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\abc
+org.eclipse.jst.jee.server\:IT-Tool-war=C\:\\Users\\deniz\\Desktop\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\IT-Tool-war
+org.eclipse.jst.jee.server\:demo-war=C\:\\Users\\deniz\\Desktop\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\demo-war
+org.eclipse.jst.jee.server\:demo_3=C\:\\Users\\deniz\\Desktop\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\demo_3
+org.eclipse.jst.jee.server\:IT-Tool=C\:\\Users\\deniz\\Desktop\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\IT-Tool

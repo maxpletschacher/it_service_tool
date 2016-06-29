@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>IT.Software.Hardware</title>
+<link rel="stylesheet" href="../css/main.css" />
+<script type="text/javascript" src="../js/main.js"></script>
+</head>
+
+<body>
+	<div id="login" class="popclose">
+    	<h3>Login</h3><a href="#" id="loginOpen2">X</a>
+        <form action="#" method="post">
+			<label for="email">E-Mail</label><input type="text" name="email" id="email" placeholder="E-Mail">
+			<label for="password">Passwort</label><input type="password" name="password" id="password" placeholder="********">
+            <button>Login</button>
+        </form>
+    </div>
+    <div id="registrieren" class="popclose">
+    	<h3>Registrierung</h3><a href="#" id="regOpen2">X</a>
+        <form action="#" method="post">
+        	<label for="vorname">Vorname</label><input type="text" name="vorname" id="vorname" placeholder="Vorname">
+            <label for="name">Name</label><input type="text" name="name" id="name" placeholder="Name">
+			<label for="email">E-Mail</label><input type="text" name="email" id="email" placeholder="E-Mail">
+			<label for="password">Passwort</label><input type="password" name="password" id="password" placeholder="********">
+            <button>Registrieren</button>
+        </form>
+    </div>
+	<div id="wrap">
+		<noscript>Javascript ist deaktiviert. Um die Seite voll nutzen zu können aktivieren Sie bitte Javascript.</noscript>
+        <header>
+        	<h1>IT.Software.Hardware</h1>
+        	<div class="options">
+				<form action="#" id="search-box">
+					<input placeholder="Produkt suchen" id="search-text" type="text" name="search" autocomplete="off">
+				</form>
+	            <p>
+				| <a href="#" id="loginOpen">Login</a> | <a href="#" id="regOpen">Registrieren</a>
+				</p>
+			</div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produkte</a></li>
+                <li><a href="#">Tickets</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Impressum</a></li>
+				<li><a id ="warenkorb" href="#">Warenkorb (0)</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <nav id="subnav">
+                <h4>Produkte</h4>
+                <ul>
+                    <li><a href="#">Hardware</a>
+                        <ul>
+                            <li><a href="#">Acer</a></li>
+                            <li><a href="#">Apple</a></li>
+                            <li><a href="#">Dell</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Software</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </nav>
+            <main>
+              <h2>Warenkorb</h2>
+              	<form action="#">
+              	<div id="product-list">
+                	<div class="product">
+                        <div class="product-image">
+                            <img alt="Produkt xy" src="http://cdn.pollin.de/article/xtrabig/X702400.JPG">
+                        </div>
+                        <div class="details">
+                            <p>Bestellnummer:<span>702 850</span></p>
+                            <hr>
+                            <p>Anzahl x Preis:<span><input type="text" size="3" placeholder="1" value="1" name="anz[]"><input type="hidden" value="1" name="prodId"> x 5,99 € (5,99 €)</span><br>
+                            <span>Inkl. MwSt., <a href="#">zzgl. Versandkosten</a></span></p>
+                            <hr>
+                            <p>Verfügbarkeit:<span class="green">Artikel verfügbar.</span></p>
+                        </div>
+                    </div>
+                	<div class="product">
+                        <div class="product-image">
+                            <img alt="Produkt xy" src="http://cdn.pollin.de/article/xtrabig/X702400.JPG">
+                        </div>
+                        <div class="details">
+                            <p>Bestellnummer:<span>702 850</span></p>
+                            <hr>
+                            <p>Anzahl x Preis:<span><input type="text" size="3" placeholder="1" value="1" name="anz[]"><input type="hidden" value="1" name="prodId"> x 5,99 € (5,99 €)</span><br>
+                            <span>Inkl. MwSt., <a href="#">zzgl. Versandkosten</a></span></p>
+                            <hr>
+                            <p>Verfügbarkeit:<span class="green">Artikel verfügbar.</span></p>
+                        </div>
+                    </div>
+                	<div class="product">
+                        <div class="product-image">
+                            <img alt="Produkt xy" src="http://cdn.pollin.de/article/xtrabig/X702400.JPG">
+                        </div>
+                        <div class="details">
+                            <p>Bestellnummer:<span>702 850</span></p>
+                            <hr>
+                            <p>Anzahl x Preis:<span><input type="text" size="3" placeholder="1" value="1" name="anz[]"><input type="hidden" value="1" name="prodId"> x 5,99 € (5,99 €)</span><br>
+                            <span>Inkl. MwSt., <a href="#">zzgl. Versandkosten</a></span></p>
+                            <hr>
+                            <p>Verfügbarkeit:<span class="green">Artikel verfügbar.</span></p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <p class="pay"><b>Netto:</b> <span>15,10 €</span></p>
+                <p class="pay">Mehrwertsteuer: <span>2,87 €</span></p>
+                <p class="pay"><b>Summe:</b> <span>17,97 €</span></p>
+                <h3>Zahlungsmethoden:</h3>
+                	<p><input name="zahlungsart" type="radio"> Vorkasse</p>
+                	<p><input name="zahlungsart" type="radio"> PayPal</p>
+                <p class="pay"><button>Kaufen</button></p>
+                </form>
+            </main>
+        </div>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+        </footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+package de.ittool.beans;
+
+public class Bewertung {
+
+}

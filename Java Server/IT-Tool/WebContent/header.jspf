@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>${meta.title}</title>
+<link rel="stylesheet" href="css/main.css" />
+${meta.css}
+<script type="text/javascript" src="js/main.js"></script>
+${meta.js}
+</head>
+<body>
+	<div id="login" class="popclose">
+    	<h3>Login</h3><a href="#" id="loginOpen2">X</a>
+        <form action="#" method="post">
+			<label for="email">E-Mail</label><input type="text" name="email" id="email" placeholder="E-Mail">
+			<label for="password">Passwort</label><input type="password" name="password" id="password" placeholder="********">
+            <button>Login</button>
+        </form>
+    </div>
+    <div id="registrieren" class="popclose">
+    	<h3>Registrierung</h3><a href="#" id="regOpen2">X</a>
+        <form action="#" method="post">
+        	<label for="vorname">Vorname</label><input type="text" name="vorname" id="vorname" placeholder="Vorname">
+            <label for="name">Name</label><input type="text" name="name" id="name" placeholder="Name">
+			<label for="email">E-Mail</label><input type="text" name="email" id="email" placeholder="E-Mail">
+			<label for="password">Passwort</label><input type="password" name="password" id="password" placeholder="********">
+            <button onclick="alert('ajax');">Registrieren</button>
+        </form>
+    </div>
+    <div id="versandPopup" class="popclose">
+    	info <a href="#" class="versandLink2">X</a>
+    </div>
+	<div id="wrap">
+		<noscript>Javascript ist deaktiviert. Um die Seite voll nutzen zu können aktivieren Sie bitte Javascript.</noscript>
+        <header>
+        	<h1>IT.Software.Hardware</h1>
+        	<div class="options">
+				<form action="#" id="search-box">
+					<input placeholder="Produkt suchen" id="search-text" type="text" name="search" autocomplete="off"><p id="sucheWarnung" class="popclose"></p>
+				</form>
+	            <p>
+				| <a href="#" id="loginOpen">Login</a> | <a href="#" id="regOpen">Registrieren</a>
+				</p>
+			</div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="#">Produkte</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Impressum</a></li>
+				<li><a id ="warenkorb" href="#">Warenkorb (0)</a></li>
+            </ul>
+        </nav>

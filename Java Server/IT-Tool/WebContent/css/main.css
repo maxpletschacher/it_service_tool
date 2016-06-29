@@ -1,0 +1,282 @@
+* {
+	padding:0;
+	margin:0;
+	font-family: verdana;
+}
+#wrap {
+	margin:auto;
+	max-width:1920px;
+	overflow:hidden;
+}
+#wrap nav {
+	width: 100%;
+	overflow: hidden;
+	background-color:#3D99FF;
+}
+#wrap nav li {
+	float: left;
+	padding: 5px;
+	margin: 0px 5px;
+	list-style-type: none;
+}
+#wrap nav li a {
+	color:#ffffff;
+	text-decoration: none;
+}
+
+#search-text {
+	padding:5px;
+	font-size:12px;
+	color:black;
+	margin-right:10px;
+}
+
+header {
+	padding:20px;
+	overflow:hidden;
+}
+header h1 {
+	color:#3D99FF;
+	float:left;
+}
+header p {
+	overflow:hidden;
+	display:block;
+	color:#3D99FF;
+}
+header p a {
+	text-decoration:none;
+	color:#3D99FF;
+}
+header .options {
+	display: block; 
+	overflow: hidden; 
+	width: 33%; 
+	float: right;
+}
+header .options form {
+	float:left;
+}
+#subnav {
+	margin-top:15px;
+	max-width: 200px;
+	float: left;
+	padding:5px;
+	background-color: #eeeeee !important;
+	border:solid #3d99ff 1px;
+	margin-left: 15px;
+}
+#subnav h4 {
+	background-color:#3D99FF;
+	color:#ffffff;
+	margin:0px;
+}
+#subnav ul li {
+	float: none;
+}
+#subnav ul li a {
+	color:#000000;
+}
+#subnav ul li ul li {
+	margin-left:10px;
+}
+#content {
+	background-color:#eeeeee;
+}
+main {
+	overflow:hidden;
+	padding:15px;
+	min-height:300px;
+}
+main h2, h3, h4 {
+	background-color:#3D99FF;
+	color: #ffffff;
+	padding: 5px 10px;
+	margin: 10px 0px;	
+}
+noscript {
+	background-color:#3D99FF;
+	color: #ffffff;
+	padding: 5px 10px;
+	width: 100%;
+	display: block;
+}
+main h2 {
+	margin-top:5px;
+}
+.product-group {
+	border:solid #3D99FF 1px;
+	padding:10px;
+	padding-top:0px;
+	overflow:hidden;
+}
+.product-group .product {
+	margin-left: 20px;
+	margin-top:20px;
+	padding:15px;
+	width:150px;
+	overflow:hidden;
+	float:left;
+	background-color: #ffffff;
+}
+.product-group .product img {
+	width:100%;
+	margin-bottom:5px;
+}
+.prodBild {
+	height: 120px;
+	width: 150px;
+}
+.product-group .product h5 a {
+	color:#3D99FF !important;
+}
+.product-group .product h5 {
+	height: 35px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 150px;
+}
+.product-group .product p {
+	font-size:10pt;
+	overflow:hidden;
+}
+.product-group .product p span {
+	float:right;
+	color:#000000;
+}
+#product-view {
+	overflow:hidden;
+	margin-bottom: 10px;
+}
+#product-image {
+	width: 300px;
+	overflow: hidden;
+	border:solid black 1px;
+	float: left;
+	margin-right: 10px;
+}
+#product-image img {
+	width:100%;
+}
+#details p, .details p {
+	overflow:hidden;
+}
+#details p span, .details p span {
+	float:right;
+}
+#details div, .details div {
+	float: right;
+	width: auto;
+	margin:10px 0;
+	overflow:hidden;
+}
+#product-description {
+	overflow: hidden; 
+	float: left;
+	margin-top: 10px;
+	margin-bottom:20px;
+}
+#product-description h5 {
+	background-color:#3D99FF;
+	color: #ffffff;
+	padding: 5px 10px;
+	margin: 10px 0px;	
+}
+#product-description ul.features li, ul.features li  {
+	margin-left: 20px;
+	list-style-type: disc;
+}
+#details span a, .details span a {
+	text-decoration:none;
+	color:#3D99FF;
+}
+#product-list .product-image {
+	width:100px;
+	overflow: hidden;
+	border:solid black 1px;
+	float: left;
+	margin-right: 10px;
+}
+#product-list .product-image img {
+	width:100%;
+}
+#product-list .product {
+	overflow: hidden;
+	margin:10px 0px;
+}
+p.pay {
+	width:100%;
+	overflow:hidden;
+}
+p.pay span, p.pay button {
+	float:right;
+}
+p.pay button {
+	width: 30%;
+}
+button {
+	background-color: #3d99ff;
+	color: #ffffff;
+	border-radius: 8px;
+	border-style: none;
+	font-size: 12pt;
+	padding: 10px;
+	margin: 10px 0px;
+}
+
+.green {
+	color:#007708;
+}
+.red {
+	color:#cb0001;
+}
+
+#popup, #login, #registrieren, #versandPopup {
+	position: absolute;
+	background-color: #ffffff;
+	border: solid #3d99ff 3px;
+	border-radius: 8px;
+	padding: 0px 10px 10px 10px;
+	left: 50%;
+	width: 320px;
+	margin-left: -160px;
+	top: 50px;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+#popup form, #login form, #registrieren form {
+	margin:5px 0px;
+}
+#popup form label, #login form label, #registrieren form label {
+	font-weight:bold;
+}
+#popup form input[type="text"], #popup form input[type="password"], #login form input[type="text"], #registrieren form input[type="text"], #login form input[type="password"], #registrieren form input[type="password"] {
+	width: 100%;
+	height: 35px;
+	font-size: 16pt;
+	margin: 5px 0px;
+}
+#popup form button, #login form button, #registrieren form button {
+	background-color: #3d99ff;
+	color: #ffffff;
+	border-radius: 8px;
+	border-style: none;
+	font-size: 18pt;
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0px;
+}
+#popup a, #login a, #registrieren a, , #versandPopup a {
+	position: absolute;top:15px;
+	text-decoration: none;
+	color: darkred;
+	right:20px;
+	font-weight: bold;
+}
+.popclose {
+	display:none;
+}
+.popopen {
+	display:block;
+}

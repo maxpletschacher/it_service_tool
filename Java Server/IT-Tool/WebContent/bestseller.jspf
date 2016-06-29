@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+                <h3>Bestseller</h3>
+                <div class="product-group">
+                	<c:forEach var="bs" items="${bestseller}">
+                	<div class="product">
+                		<div class="prodBild">
+                    		<img alt="${bs.name}" src="${bs.bild1}">
+                    	</div>
+                        <h5><a href="product?id=${bs.id}">${bs.name}</a></h5>
+                        <p class="${bs.lagerstatusStyle}">${bs.lagerstatus} <span>${bs.preis} €</span></p>
+                    </div>
+                    </c:forEach>
+                </div>
